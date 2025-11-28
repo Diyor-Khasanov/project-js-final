@@ -308,3 +308,25 @@ body {
   margin-left: 300px;
   margin-top: 40px;
 }
+
+.shops .top{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1200px;
+}
+
+.shops .top .pagination {
+  display: flex;
+  gap: 20px;
+  margin-left: 150px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.shops .top .pagination .active {
+  background: #70c05b;
+  padding: 8px 10px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
