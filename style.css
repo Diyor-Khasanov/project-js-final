@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Syne", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* LEFT (LOGO) */
+.header .left .logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #414141;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* CENTER */
+.header .center {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.header .center input {
+  padding: 10px 20px;
+  border: 2px solid #70c05b;
+  border-radius: 6px;
+  color: #414141;
+}
+
+.header .center button {
+  padding: 10px 20px;
+  background: #70c05b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.header .right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header .right .right-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+}
+
+.header .right .right-list .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #414141;
+}
+
+.header .right select {
+  border: none;
+  padding: 10px;
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+.mobile-menu {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: none; /* default */
+  }
+
+  .mobile-menu.active {
+    display: flex !important;
+  }
+  .header .center input,
+  .header .right {
+    display: none;
+  }
+
+  /* Catalog button must stay visible */
+  .header .center button {
+    display: block;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid #70c05b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu input {
+    padding: 12px 20px;
+    border: 2px solid #70c05b;
+    border-radius: 6px;
+  }
+
+  .mobile-menu .right-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mobile-menu .right-list .list {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: #414141;
+  }
+
+  .mobile-menu select {
+    padding: 12px;
+    border: 2px solid #70c05b;
+    border-radius: 6px;
+  }
+}
